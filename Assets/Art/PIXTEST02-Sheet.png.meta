@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: aac98a8f9d9a8ca4c92969b346597907
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3313281569628656226
+    second: PIXTEST02-Sheet_0
+  - first:
+      213: 1503352636243968383
+    second: PIXTEST02-Sheet_1
+  - first:
+      213: 7137899996383984953
+    second: PIXTEST02-Sheet_2
+  - first:
+      213: -4541628945411276740
+    second: PIXTEST02-Sheet_3
+  - first:
+      213: -2767126670166942978
+    second: PIXTEST02-Sheet_4
+  - first:
+      213: 1821913058389123874
+    second: PIXTEST02-Sheet_5
+  - first:
+      213: -8611851466008030144
+    second: PIXTEST02-Sheet_6
+  - first:
+      213: 3467788769494520943
+    second: PIXTEST02-Sheet_7
+  - first:
+      213: 3163914447535044058
+    second: PIXTEST02-Sheet_8
+  - first:
+      213: 4803548099825456894
+    second: PIXTEST02-Sheet_9
+  - first:
+      213: 5676059137094559374
+    second: PIXTEST02-Sheet_10
+  - first:
+      213: -1742112813561701222
+    second: PIXTEST02-Sheet_11
+  - first:
+      213: 5734429973403913668
+    second: PIXTEST02-Sheet_12
+  - first:
+      213: -7696092458847270300
+    second: PIXTEST02-Sheet_13
+  - first:
+      213: -1757981830779881211
+    second: PIXTEST02-Sheet_14
+  - first:
+      213: -7876689671520599806
+    second: PIXTEST02-Sheet_15
+  - first:
+      213: -5332964980824530567
+    second: PIXTEST02-Sheet_16
+  - first:
+      213: 4128433331564278385
+    second: PIXTEST02-Sheet_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 392
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262909678042bfd20800000000000000
+      internalID: 3313281569628656226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 392
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71087fe14bfcd410800000000000000
+      internalID: 1503352636243968383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 392
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93dbabe7a3aee0360800000000000000
+      internalID: 7137899996383984953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 392
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3001276984e8f0c0800000000000000
+      internalID: -4541628945411276740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 392
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa903054f03999d0800000000000000
+      internalID: -2767126670166942978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 272
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223ede0164cb84910800000000000000
+      internalID: 1821913058389123874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 272
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0441a2e18be8c7880800000000000000
+      internalID: -8611851466008030144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 272
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f645fc1438f002030800000000000000
+      internalID: 3467788769494520943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 272
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad57d094d6b78eb20800000000000000
+      internalID: 3163914447535044058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 272
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef65997eb81a9a240800000000000000
+      internalID: 4803548099825456894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86a1ae46b965ce40800000000000000
+      internalID: 5676059137094559374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 152
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c9ffc40a5c2d7e0800000000000000
+      internalID: -1742112813561701222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 152
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdc712bda9c49f40800000000000000
+      internalID: 5734429973403913668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 152
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a88df2facf13590800000000000000
+      internalID: -7696092458847270300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 152
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50936cec6d46a97e0800000000000000
+      internalID: -1757981830779881211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201c60be97060b290800000000000000
+      internalID: -7876689671520599806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 32
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9712b5eea908df5b0800000000000000
+      internalID: -5332964980824530567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PIXTEST02-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 32
+        width: 172
+        height: 120
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17275cedd342b4930800000000000000
+      internalID: 4128433331564278385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
