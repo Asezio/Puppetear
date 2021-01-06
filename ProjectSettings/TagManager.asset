@@ -4,8 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Enemy
   - Item
+=======
+  - Interactable
+>>>>>>> 4aee576f66d58e0c88fa8fa9a9b7452b4fb751c1
   layers:
   - Default
   - TransparentFX
@@ -43,9 +47,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Player
     uniqueID: 3747282627
     locked: 0
   - name: New Layer
     uniqueID: 1111947297
+=======
+  - name: Enemy
+    uniqueID: 3316864133
+>>>>>>> 4aee576f66d58e0c88fa8fa9a9b7452b4fb751c1
     locked: 0
