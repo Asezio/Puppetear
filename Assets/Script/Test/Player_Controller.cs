@@ -27,6 +27,9 @@ public class Player_Controller : BaseUnit
         //position.x += moveX * Time.deltaTime;
         //position.y += moveY * Time.deltaTime;
         //transform.position = position;
+        WeaponSwitch();
+
+
     }
 
 

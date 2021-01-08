@@ -14,27 +14,47 @@ public class Interactable : MonoBehaviour
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
-        defaultMaterial = sr.material;
+        defaultMaterial = sr.material;     
         TextUI.SetActive(false);
     }
 
     //碰到玩家时，给outline
-    private void OnTriggerStay2D(Collider2D other)
+    public void MiaoBian()
     {
-        if (other.gameObject.GetComponent<Player_Controller>() != null)
-        {
+      
             sr.material = outlineMaterial;
-            TextUI.transform.position = textPosition.position;
+            TextUI.transform.position = textPosition.position;       
+            TextChange();
+    }
+
+    public void ExitMiaobian()
+    {
+       
+            sr.material = defaultMaterial;
+            TextUI.SetActive(false);
+        
+    }
+
+    public void TextChange()
+    {
+        
+      //  if ((this.tag == "Enemy") && (GameObject.Find("Weapon1").GetComponent<Weapon1>().enabled == true))
+        if(this.tag == "Enemy")
+        {
+            Text text = TextUI.GetComponent<Text>();
+            text.text = "Press E to Kill";
+            TextUI.SetActive(true);
+        }
+
+        
+        //if ((this.tag == "Item") && (GameObject.Find("Weapon2").GetComponent<Weapon2>().enabled == true))
+        if(this.tag == "Item")
+        {
+            Text text = TextUI.GetComponent<Text>();
+            text.text = "Left Click to use";
             TextUI.SetActive(true);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.GetComponent<Player_Controller>() != null)
-        {
-            sr.material = defaultMaterial;
-            TextUI.SetActive(false);
-        }
-    }
+
 }
