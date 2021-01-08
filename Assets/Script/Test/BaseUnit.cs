@@ -33,10 +33,12 @@ public class BaseUnit : MonoBehaviour
         if (DirectionX < 0)
         {
             sr.flipX = false;
+            GameObject.Find("ItemRoot").GetComponent<Transform>().localEulerAngles = new Vector3(0, 0, 0);
         }
         if (DirectionX > 0)
         {
             sr.flipX = true;
+            GameObject.Find("ItemRoot").GetComponent<Transform>().localEulerAngles = new Vector3(0, 180, 0);
         }
 
     }
