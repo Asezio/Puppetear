@@ -8,7 +8,6 @@ public class WeaponBase : MonoBehaviour
     public bool isAvailable = false;//是否已拥有
     public float cooldown;
     public float timer;
-    public bool isActive;           //是否已冷却
     //protected bool canInteract= false;
     public LayerMask enemylayers;
     public LayerMask itemlayers;
@@ -86,7 +85,7 @@ public class WeaponBase : MonoBehaviour
                 //将检测物体设置为当前选中物体
                 test = obj;
                 //检测武器是否在冷却状态中
-                if (isActive == true)
+                if (BaseUnit.isWeapon1Active == true)
                 {
                     if (Input.GetButtonDown("Interact") || Input.GetMouseButtonDown(0))
                     {
@@ -94,13 +93,11 @@ public class WeaponBase : MonoBehaviour
                         obj.GetComponent<Interactable>().ExitMiaobian();
                         obj.GetComponent<EnemyBase>().Die();
                         test.GetComponent<Interactable>().ExitMiaobian();
+                        //GameObject.Find("UI_Weapon1").GetComponent<UIweapon>().Cooldown(gameObject);
                         //测试物体失去目标，将其指定为初始物体
                         test = GameObject.Find("FirstAttached");
+                        BaseUnit.isWeapon1Active = false;
                     }
-                }
-                else
-                {
-                    Cooldown();
                 }
             }
 
@@ -178,12 +175,4 @@ public class WeaponBase : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, WeaponRange);
     }
 
-    void Cooldown()
-    {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            isActive = true;
-        }
-    }
 }

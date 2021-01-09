@@ -18,9 +18,19 @@ public class EnemyBase : MonoBehaviour
 
     public void Die()
     {
+        UITimeBar.timeLeft = GameObject.Find("TimeLeft").GetComponent<UITimeBar>().timeMax;
         Destroy(gameObject,0.5f);
     }
 
 
+    IEnumerator TimeRefresh()
+    {
+        Debug.Log("1");
+        UITimeBar.timeLeft = GameObject.Find("TimeLeft").GetComponent<UITimeBar>().timeMax;
+        yield return new WaitForSeconds(waitTime);
+        Debug.Log("2");
+        
+
+    }
 
 }

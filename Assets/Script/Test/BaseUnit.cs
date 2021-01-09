@@ -16,6 +16,14 @@ public class BaseUnit : MonoBehaviour
     protected Animator anim;
     public Transform trans;
 
+
+    public static bool isWeapon1Active = true;
+    public static bool isWeapon2Active = true;
+    public static bool isWeapon3Active = true;
+    public static bool isWeapon4Active = true;
+
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -69,6 +77,10 @@ public class BaseUnit : MonoBehaviour
     {
         if (Input.GetButtonDown("Weapon1"))
         {
+            GameObject.Find("UI_Weapon1").GetComponent<UIweapon>().WeaponImageGrey.enabled = false;
+            GameObject.Find("UI_Weapon2").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
+            GameObject.Find("UI_Weapon3").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
+            GameObject.Find("UI_Weapon4").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
             GameObject.Find("Weapon1").GetComponent<Weapon1>().enabled = true;
             GameObject.Find("Weapon2").GetComponent<Weapon2>().enabled = false;
             GameObject.Find("Weapon3").GetComponent<Weapon3>().enabled = false;
@@ -82,6 +94,10 @@ public class BaseUnit : MonoBehaviour
         {
             if (GameObject.Find("Weapon2").GetComponent<Weapon2>().isAvailable==true)
             {
+                GameObject.Find("UI_Weapon1").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
+                GameObject.Find("UI_Weapon2").GetComponent<UIweapon>().WeaponImageGrey.enabled = false;
+                GameObject.Find("UI_Weapon3").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
+                GameObject.Find("UI_Weapon4").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
                 GameObject.Find("Weapon1").GetComponent<Weapon1>().enabled = false;
                 GameObject.Find("Weapon2").GetComponent<Weapon2>().enabled = true;
                 GameObject.Find("Weapon3").GetComponent<Weapon3>().enabled = false;
@@ -96,6 +112,10 @@ public class BaseUnit : MonoBehaviour
         {
             if (GameObject.Find("Weapon3").GetComponent<Weapon3>().isAvailable == true)
             {
+                GameObject.Find("UI_Weapon1").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
+                GameObject.Find("UI_Weapon2").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
+                GameObject.Find("UI_Weapon3").GetComponent<UIweapon>().WeaponImageGrey.enabled = false;
+                GameObject.Find("UI_Weapon4").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
                 GameObject.Find("Weapon1").GetComponent<Weapon1>().enabled = false;
                 GameObject.Find("Weapon2").GetComponent<Weapon2>().enabled = false;
                 GameObject.Find("Weapon3").GetComponent<Weapon3>().enabled = true;
@@ -111,6 +131,10 @@ public class BaseUnit : MonoBehaviour
         {
             if (GameObject.Find("Weapon3").GetComponent<Weapon3>().isAvailable == true)
             {
+                GameObject.Find("UI_Weapon1").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
+                GameObject.Find("UI_Weapon2").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
+                GameObject.Find("UI_Weapon3").GetComponent<UIweapon>().WeaponImageGrey.enabled = true;
+                GameObject.Find("UI_Weapon4").GetComponent<UIweapon>().WeaponImageGrey.enabled = false;
                 GameObject.Find("Weapon1").GetComponent<Weapon1>().enabled = false;
                 GameObject.Find("Weapon2").GetComponent<Weapon2>().enabled = false;
                 GameObject.Find("Weapon3").GetComponent<Weapon3>().enabled = false;
