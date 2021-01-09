@@ -14,6 +14,7 @@ public class EnemyFOV : MonoBehaviour
 
     [SerializeField] private float fov = 90f;
     [SerializeField] private float viewDistance = 50f;
+    [SerializeField] private LayerMask playerLayer;
 
     private FOV fieldOfView;
 
@@ -39,6 +40,7 @@ public class EnemyFOV : MonoBehaviour
 
     private void Update()
     {
+        
         switch (state)
         {
             default:
@@ -83,6 +85,7 @@ public class EnemyFOV : MonoBehaviour
                 float arriveDistance = 0.1f;
                 if (distanceAfter < arriveDistance || distanceBefore <= distanceAfter)
                 {
+                    //Flip();
                     // Go to next waypoint
                     waitTimer = waitTimeList[wayPointIndex];
                     wayPointIndex = (wayPointIndex + 1) % waypointList.Length;
@@ -103,21 +106,11 @@ public class EnemyFOV : MonoBehaviour
             if (Vector3.Angle(GetAimDir(), dirToPlayer) < fov / 2f)
             {
                 
-                RaycastHit2D raycastHit2D = Physics2D.Raycast(GetPosition(), dirToPlayer, viewDistance);
+                RaycastHit2D raycastHit2D = Physics2D.Raycast(GetPosition(), dirToPlayer, viewDistance,playerLayer);
                 if (raycastHit2D.collider != null)
                 {
-                    //Debug.Log("Player is in here");
 
-                    // Hit something
-                    if (raycastHit2D.collider.gameObject.GetComponent<Player_Controller>() != null)
-                    {
-                        // Hit Player
-                        Debug.Log("I hit the player!");
-                    }
-                    else
-                    {
-                        // Hit something else
-                    }
+                    Debug.Log(raycastHit2D.collider.name);
                 }
             }
         }
