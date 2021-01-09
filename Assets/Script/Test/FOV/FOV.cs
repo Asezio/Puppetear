@@ -9,6 +9,7 @@ public class FOV : MonoBehaviour
     private Vector3 origin;
     private float startingAngle;
     private float fov;
+    private float viewDistance;
 
     private void Start()
     {
@@ -24,7 +25,7 @@ public class FOV : MonoBehaviour
         int rayCount = 50;
         float angle = startingAngle;
         float angleIncrease = fov / rayCount;
-        float viewDistance = 50f;
+        viewDistance = 50f;
 
         Vector3[] vertices = new Vector3[rayCount +1 +1];
         Vector2[] uv = new Vector2[vertices.Length];
@@ -77,7 +78,7 @@ public class FOV : MonoBehaviour
 
     public void SetAimDirection(Vector3 aimDirection)
     {
-        startingAngle = GetAngleFromVectorFloat(aimDirection) - fov/2;
+        startingAngle = GetAngleFromVectorFloat(aimDirection) + fov/2;
     }
     
 
@@ -90,6 +91,16 @@ public class FOV : MonoBehaviour
             n += 360;
         }
         return n;
+    }
+
+    public void SetFoV(float fov)
+    {
+        this.fov = fov;
+    }
+
+    public void SetViewDistance(float viewDistance)
+    {
+        this.viewDistance = viewDistance;
     }
 
     public static Vector3 GetVectorFromAngle(float angle)
