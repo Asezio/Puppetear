@@ -8,7 +8,7 @@ public class EnemyFOV : MonoBehaviour
     [SerializeField] private Vector3[] waypointList;
     [SerializeField] private float[] waitTimeList;
     private int wayPointIndex=0;
-    [SerializeField]private Transform pfFieldofView;
+    public Transform pfFieldofView;
     [SerializeField] Vector3 aimDirection;
     [SerializeField] private Transform player;
 
@@ -40,7 +40,6 @@ public class EnemyFOV : MonoBehaviour
 
     private void Update()
     {
-        
         switch (state)
         {
             default:
@@ -58,7 +57,7 @@ public class EnemyFOV : MonoBehaviour
             fieldOfView.SetAimDirection(GetAimDir());
         }
 
-        Debug.DrawLine(transform.position, transform.position + GetAimDir() * 10f);
+        Debug.DrawLine(transform.position, transform.position + GetAimDir() * 0.5f);
     }
 
     private void HandleMovement()

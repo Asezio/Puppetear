@@ -19,7 +19,9 @@ public class EnemyBase : MonoBehaviour
     public void Die()
     {
         UITimeBar.timeLeft = GameObject.Find("TimeLeft").GetComponent<UITimeBar>().timeMax;
+        DestroyImmediate(GetComponent<EnemyFOV>().pfFieldofView.gameObject, true);
         Destroy(gameObject,0.5f);
+
     }
 
 

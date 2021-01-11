@@ -16,7 +16,7 @@ public class FOV : MonoBehaviour
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         origin = Vector3.zero;
-        fov = 90f;
+       
 
     }
 
@@ -25,7 +25,6 @@ public class FOV : MonoBehaviour
         int rayCount = 50;
         float angle = startingAngle;
         float angleIncrease = fov / rayCount;
-        viewDistance = 50f;
 
         Vector3[] vertices = new Vector3[rayCount +1 +1];
         Vector2[] uv = new Vector2[vertices.Length];
