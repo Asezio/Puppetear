@@ -30,11 +30,8 @@ public class EnemyFOV : MonoBehaviour
     private State state;
     private void Start()
     {
-        if (waitTimeList.Length != 0)
-        {
-            waitTimer = waitTimeList[0];
-        }
 
+        waitTimer = waitTimeList[0];
         lastMoveDir = aimDirection;
 
         fieldOfView = Instantiate(pfFieldofView, null).GetComponent<FOV>();
@@ -77,31 +74,25 @@ public class EnemyFOV : MonoBehaviour
                 break;
 
             case State.Moving:
-                if (wayPointIndex != 0)
+                //Debug.Log("move");
+
+
+                Vector3 waypoint = waypointList[wayPointIndex];
+                Vector3 waypointDir = (waypoint - transform.position).normalized;
+                lastMoveDir = waypointDir;
+                float distanceBefore = Vector3.Distance(transform.position, waypoint);
+                transform.position = transform.position + waypointDir * speed * Time.deltaTime;
+                float distanceAfter = Vector3.Distance(transform.position, waypoint);
+
+                float arriveDistance = 0.1f;
+                if (distanceAfter < arriveDistance || distanceBefore <= distanceAfter)
                 {
-                    Vector3 waypoint = waypointList[wayPointIndex];
-                    Vector3 waypointDir = (waypoint - transform.position).normalized;
-                    lastMoveDir = waypointDir;
-                    float distanceBefore = Vector3.Distance(transform.position, waypoint);
-                    transform.position = transform.position + waypointDir * speed * Time.deltaTime;
-                    float distanceAfter = Vector3.Distance(transform.position, waypoint);
-
-                    float arriveDistance = 0.1f;
-                    if (distanceAfter < arriveDistance || distanceBefore <= distanceAfter)
-                    {
-                        //Flip();
-                        // Go to next waypoint
-                        waitTimer = waitTimeList[wayPointIndex];
-                        wayPointIndex = (wayPointIndex + 1) % waypointList.Length;
-                        state = State.Waiting;
-                    }
+                    //Flip();
+                    // Go to next waypoint
+                    waitTimer = waitTimeList[wayPointIndex];
+                    wayPointIndex = (wayPointIndex + 1) % waypointList.Length;
+                    state = State.Waiting;
                 }
-                else
-                {
-                    
-                }
-
-
 
                 break;
 
