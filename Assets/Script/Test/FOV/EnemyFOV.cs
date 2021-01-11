@@ -7,8 +7,8 @@ public class EnemyFOV : MonoBehaviour
     [SerializeField] private float speed = 25f;
     [SerializeField] private Vector3[] waypointList;
     [SerializeField] private float[] waitTimeList;
-    private int wayPointIndex=0;
-    public Transform pfFieldofView;
+    private int wayPointIndex;
+    [SerializeField] private Transform pfFieldofView;
     [SerializeField] Vector3 aimDirection;
     [SerializeField] private Transform player;
 
@@ -16,7 +16,7 @@ public class EnemyFOV : MonoBehaviour
     [SerializeField] private float viewDistance = 50f;
     [SerializeField] private LayerMask playerLayer;
 
-    private FOV fieldOfView;
+    public FOV fieldOfView;
 
     private float waitTimer;
     private Vector3 lastMoveDir;
@@ -30,7 +30,11 @@ public class EnemyFOV : MonoBehaviour
     private State state;
     private void Start()
     {
-        waitTimer = waitTimeList[0];
+        if (waitTimeList.Length != 0)
+        {
+            waitTimer = waitTimeList[0];
+        }
+
         lastMoveDir = aimDirection;
 
         fieldOfView = Instantiate(pfFieldofView, null).GetComponent<FOV>();
@@ -66,7 +70,6 @@ public class EnemyFOV : MonoBehaviour
         {
             case State.Waiting:
                 waitTimer -= Time.deltaTime;
-                //animatedWalker.SetMoveVector(Vector3.zero);
                 if (waitTimer <= 0f)
                 {
                     state = State.Moving;
@@ -74,22 +77,32 @@ public class EnemyFOV : MonoBehaviour
                 break;
 
             case State.Moving:
-                Vector3 waypoint = waypointList[wayPointIndex];
-                Vector3 waypointDir = (waypoint - transform.position).normalized;
-                lastMoveDir = waypointDir;
-                float distanceBefore = Vector3.Distance(transform.position, waypoint);
-                transform.position = transform.position + waypointDir * speed * Time.deltaTime;
-                float distanceAfter = Vector3.Distance(transform.position, waypoint);
-
-                float arriveDistance = 0.1f;
-                if (distanceAfter < arriveDistance || distanceBefore <= distanceAfter)
+                if (wayPointIndex != 0)
                 {
-                    //Flip();
-                    // Go to next waypoint
-                    waitTimer = waitTimeList[wayPointIndex];
-                    wayPointIndex = (wayPointIndex + 1) % waypointList.Length;
-                    state = State.Waiting;
+                    Vector3 waypoint = waypointList[wayPointIndex];
+                    Vector3 waypointDir = (waypoint - transform.position).normalized;
+                    lastMoveDir = waypointDir;
+                    float distanceBefore = Vector3.Distance(transform.position, waypoint);
+                    transform.position = transform.position + waypointDir * speed * Time.deltaTime;
+                    float distanceAfter = Vector3.Distance(transform.position, waypoint);
+
+                    float arriveDistance = 0.1f;
+                    if (distanceAfter < arriveDistance || distanceBefore <= distanceAfter)
+                    {
+                        //Flip();
+                        // Go to next waypoint
+                        waitTimer = waitTimeList[wayPointIndex];
+                        wayPointIndex = (wayPointIndex + 1) % waypointList.Length;
+                        state = State.Waiting;
+                    }
                 }
+                else
+                {
+                    
+                }
+
+
+
                 break;
 
         }
@@ -99,13 +112,13 @@ public class EnemyFOV : MonoBehaviour
     {
         if (Vector3.Distance(GetPosition(), player.position) < viewDistance)
         {
-            
+
             // Player inside viewDistance
             Vector3 dirToPlayer = (player.position - GetPosition()).normalized;
             if (Vector3.Angle(GetAimDir(), dirToPlayer) < fov / 2f)
             {
-                
-                RaycastHit2D raycastHit2D = Physics2D.Raycast(GetPosition(), dirToPlayer, viewDistance,playerLayer);
+
+                RaycastHit2D raycastHit2D = Physics2D.Raycast(GetPosition(), dirToPlayer, viewDistance, playerLayer);
                 if (raycastHit2D.collider != null)
                 {
 
