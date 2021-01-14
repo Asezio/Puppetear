@@ -13,9 +13,7 @@ public class ItemMoveable : ItemBase
     // Update is called once per frame
     void Update()
     {
-
         MoveTo();
         Stick();
-
     }
 }

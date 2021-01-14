@@ -278,7 +278,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8993766406451564010}
   - component: {fileID: 8993766406451564011}
-  - component: {fileID: 7254015502152513385}
   - component: {fileID: 8993766406451564008}
   - component: {fileID: 8993766406451564009}
   - component: {fileID: 8993766406451564014}
@@ -298,7 +297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8993766406451564015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.62, y: 0, z: -0.13077766}
+  m_LocalPosition: {x: -3.62, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 8993766406840640707}
@@ -361,19 +360,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7254015502152513385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8993766406451564015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dc5cbf312ae6c64ea0c0f3ab90f69da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_floorHeight: 0
 --- !u!70 &8993766406451564008
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

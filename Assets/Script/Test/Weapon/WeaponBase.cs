@@ -157,9 +157,6 @@ public class WeaponBase : MonoBehaviour
                 if (Input.GetButtonDown("Interact") || Input.GetMouseButtonDown(0))
                 {
                     anim.SetTrigger("Interact");
-                    //obj.GetComponent<ItemBase>().MoveTo();
-                    //obj.GetComponent<ItemBase>().Stick();
-                    //obj.GetComponent<ItemBase>().isActive = true;
                 }
             }
             itemList.Clear();
