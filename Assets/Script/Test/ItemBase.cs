@@ -23,7 +23,7 @@ public class ItemBase : MonoBehaviour
         if (GameObject.Find("Weapon2").GetComponent<Weapon2>().enabled == true)
         {
             bool isHaveThing = GameObject.Find("Weapon2").GetComponent<Weapon2>().isHaveThing;
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0)||Input.GetButtonDown("Interact"))
             {
 
                 if (isHaveThing == false)
@@ -44,7 +44,7 @@ public class ItemBase : MonoBehaviour
     private IEnumerator MoveTawords(Transform tr, Vector3 pos, float time)
     {
         float t = 0;
-        
+
         while (true)
         {
             t += Time.deltaTime;
@@ -82,7 +82,7 @@ public class ItemBase : MonoBehaviour
         {
             gameObject.GetComponent<Collider2D>().enabled = false;
             transform.position = targetTrans.position;
-            if(GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().flipX==false)
+            if (GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().flipX == false)
             {
                 sr.flipX = true;
             }

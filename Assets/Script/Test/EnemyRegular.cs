@@ -13,6 +13,6 @@ public class EnemyRegular : EnemyBase
     // Update is called once per frame
     void Update()
     {
-        
+        //flip();
     }
 }

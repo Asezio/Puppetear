@@ -119,8 +119,8 @@ public class EnemyFOV : MonoBehaviour
                 RaycastHit2D raycastHit2D = Physics2D.Raycast(GetPosition(), dirToPlayer, viewDistance, playerLayer);
                 if (raycastHit2D.collider != null)
                 {
-
-                    Debug.Log(raycastHit2D.collider.name);
+                    GameObject.Find("XiaShuiDao_1").GetComponent<SceneManagement>().Restart();
+                    //Debug.Log(raycastHit2D.collider.name);
                 }
             }
         }

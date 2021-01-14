@@ -35,4 +35,15 @@ public class EnemyBase : MonoBehaviour
 
     }
 
+   //protected void flip()
+   // {
+   //     if (GetComponent<EnemyFOV>().GetAimDir().x > 0)
+   //     {
+   //         sr.flipX = false;
+   //     }
+   //     else
+   //     {
+   //         sr.flipX = true;
+   //     }
+   // }
 }
