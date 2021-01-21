@@ -16,8 +16,6 @@ public class FOV : MonoBehaviour
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         origin = Vector3.zero;
-       
-
     }
 
     private void Update()
@@ -41,15 +39,14 @@ public class FOV : MonoBehaviour
             if (raycastHit2D.collider == null)
             {
                 //No hit
-                vertex =origin + GetVectorFromAngle(angle) * viewDistance;
+                vertex = origin + GetVectorFromAngle(angle) * viewDistance;
             }
             else
             {
                 //Hit object
                 vertex = raycastHit2D.point;
             }
-
-                
+               
             vertices[vertexIndex] = vertex;
 
             if (i>0)
@@ -80,7 +77,6 @@ public class FOV : MonoBehaviour
         startingAngle = GetAngleFromVectorFloat(aimDirection) + fov/2;
     }
     
-
     public static float GetAngleFromVectorFloat(Vector3 dir)
     {
         dir = dir.normalized;
